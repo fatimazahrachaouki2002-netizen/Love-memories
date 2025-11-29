@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>ينور عيني - Love Memories</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        /* ---- تعديل سهل: غير النصوص بين <!-- --> */
+        body { font-family: Tahoma, Arial, sans-serif; background:#fff5f8; color:#333; margin:0; padding:0; }
+        #passwordScreen{ background:#ffe3ec; height:100vh; display:flex; align-items:center; justify-content:center; flex-direction:column; padding:20px; box-sizing:border-box;}
+        #passwordScreen input{ padding:12px; border-radius:10px; border:1px solid #d6336c; font-size:18px; width:220px; text-align:center; }
+        #passwordScreen button{ margin-top:12px; padding:10px 18px; font-size:18px; background:#d6336c; color:white; border:none; border-radius:10px; }
+        #content{ display:none; padding-bottom:40px; }
+        header{ text-align:center; padding:28px 12px 8px; }
+        h1{ color:#d6336c; margin:0; font-size:36px; }
+        .message{ width:92%; max-width:820px; margin:18px auto; background:white; padding:18px; border-radius:12px; box-shadow:0 0 10px #ffd6e0; font-size:20px; line-height:1.6; }
+        .gallery{ width:92%; max-width:820px; margin:22px auto; }
+        .photo-box{ background:white; padding:12px; border-radius:12px; margin-bottom:18px; box-shadow:0 0 8px #ffccd5; }
+        .photo-box img{ width:100%; border-radius:10px; display:block; }
+        .caption{ font-size:17px; margin-top:8px; color:#c6285a; }
+        .music-box{ width:92%; max-width:820px; margin:22px auto; background:white; padding:14px; border-radius:12px; box-shadow:0 0 10px #ffd6e0; text-align:center; }
+        footer{ text-align:center; color:#777; margin-top:24px; margin-bottom:40px; }
+        /* small screens */
+        @media (max-width:420px){ h1{ font-size:28px;} .message{ font-size:18px; } }
+    </style>
+    <script>
+        // === إعداد سريع: سهلة التعديل ===
+        // إذا بغيتي تغيّري الباسورد، بدّليه هنا:
+        const SITE_PASSWORD = "love123"; // <-- غيّري هذي لو بغيتِ كلمة سر أخرى
+
+        function checkPassword() {
+            const pass = document.getElementById("pass").value;
+            if (pass === SITE_PASSWORD) {
+                document.getElementById("passwordScreen").style.display = "none";
+                document.getElementById("content").style.display = "block";
+                // Scroll top to show header nicely
+                window.scrollTo(0,0);
+            } else {
+                alert("الباسورد غير صحيح ❌");
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <!-- شاشة الباسوورد -->
+    <div id="passwordScreen">
+        <h2>أدخل كلمة السر</h2>
+        <input type="password" id="pass" placeholder="********">
+        <button onclick="checkPassword()">دخول</button>
+        <p style="margin-top:12px; color:#6b2b44; font-size:14px;">الصفحة خاصة بيناتكم، كلمة السر قابلة للتغيير داخل كود الملف</p>
+    </div>
+
+    <!-- المحتوى -->
+    <div id="content">
+        <header>
+            <h1>ينور عيني</h1>
+        </header>
+
+        <div class="message">
+            <!-- ***** هنا تقدر تغيّري الرسالة لو بغيتي ***** -->
+            <p>
+                عايزة اقولك اني بحبك ومقدرش اني اضايقك<br>
+                انت اغلى حد ليا…<br>
+                انت كل حاجه، أنت سبب فرحي،<br>
+                انت سبب ضحكتي، انت سبب كل حاجه حلوه ❤️
+            </p>
+            <p style="margin-top:8px;"><strong>بحبك</strong></p>
+            <p>تعال نشوف كام ميموري كده مع بعض…</p>
+        </div>
+
+        <div class="gallery">
+            <!-- الصور: استبدلي روابط الصور بالروابط ديالك لو بغيتي -->
+            <!-- ملاحظة: روابط Drive هنا معمولة بصيغة direct view (uc?export=view&id=...) -->
+            <!-- الصورة 1 -->
+            <div class="photo-box">
+                <img src="https://drive.google.com/uc?export=view&id=19D35KK3ndC37zq14MZHgEnIasbtX9NUW" alt="ميموري 1">
+                <div class="caption">ميموري رقم 1 ❤️</div>
+            </div>
+
+            <!-- الصورة 2 -->
+            <div class="photo-box">
+                <img src="https://drive.google.com/uc?export=view&id=1Z79oQIBHtIbJwssxoTrSuDmyO9QNFmkP" alt="ميموري 2">
+                <div class="caption">أحلى ضحكة ❤️</div>
+            </div>
+
+            <!-- الصورة 3 -->
+            <div class="photo-box">
+                <img src="https://drive.google.com/uc?export=view&id=1Ldi0HmBmbLRCZ9w9zrigYF5p3c0Jk-28" alt="ميموري 3">
+                <div class="caption">قلب ديالي ❤️</div>
+            </div>
+
+            <!-- الصورة 4 -->
+            <div class="photo-box">
+                <img src="https://drive.google.com/uc?export=view&id=1kL_aUI8wOZ5GLuSWeNOAuPpDED5bQCB1" alt="ميموري 4">
+                <div class="caption">ميموري لا يعوّض ❤️</div>
+            </div>
+
+            <!-- الصورة 5 -->
+            <div class="photo-box">
+                <img src="https://drive.google.com/uc?export=view&id=1yovuQ6OSYTHn5bcO5mewD3YsymUuoR-h" alt="ميموري 5">
+                <div class="caption">أحلى لحظة ❤️</div>
+            </div>
+
+            <!-- الصورة 6 -->
+            <div class="photo-box">
+                <img src="https://drive.google.com/uc?export=view&id=1eiNlb97X-BKrIQ2GXFwc1AOLYDemLSN3" alt="ميموري 6">
+                <div class="caption">نظرة ديالي ليك ❤️</div>
+            </div>
+
+            <!-- الصورة 7 -->
+            <div class="photo-box">
+                <img src="https://drive.google.com/uc?export=view&id=1yJdeOwgxHrz1ZYeX3mDz9w-_2Y0VB5Ps" alt="ميموري 7">
+                <div class="caption">أغلى إنسان ❤️</div>
+            </div>
+        </div>
+
+        <div class="music-box">
+            <h3>أغنيتنا ❤️</h3>
+            <p>هادي أفضل أغنية لينا بجوج</p>
+            <iframe width="90%" height="200" src="https://www.youtube.com/embed/HLEZYcpoIN4" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <footer>من قلبي ليك ❤️</footer>
+    </div>
+
+</body>
+</html>
